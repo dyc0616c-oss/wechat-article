@@ -1,0 +1,37 @@
+# Private workspace files
+SOUL.md
+USER.md
+TOOLS.md
+AGENTS.md
+HEARTBEAT.md
+BOOTSTRAP.md
+IDENTITY.md
+TOPIC_SKILL_MAP.md
+MEMORY.md
+
+# Private working dirs
+memory/
+drafts/
+.openclaw/
+.kiro/
+references/
+
+# OS / editor
+.DS_Store
+skills/.DS_Store
+**/.DS_Store
+
+# Temp / local artifacts
+*.log
+*.tmp
+*.swp
+article_*.txt
+article_*.html
+jucom_article.html
+theblockbeats_*.html
+publish-to-telegraph.js
+save_to_chainthink.sh
+temp-*.md
+6688hash-*.md
+telegram-topic-*.md
+telegram-topic-*.docx

@@ -1,0 +1,16 @@
+{
+  "accounts": {
+    "示例账号": {
+      "appid": "wxXXXXXXXXXXXXXXXX",
+      "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "name": "我的公众号",
+      "style": {
+        "tone": "专业、客观",
+        "target": "目标读者群体",
+        "length": "建议字数范围",
+        "keywords": ["关键词1", "关键词2"]
+      }
+    }
+  },
+  "default": "示例账号"
+}

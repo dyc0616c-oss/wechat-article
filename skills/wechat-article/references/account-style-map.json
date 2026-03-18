@@ -1,0 +1,20 @@
+{
+  "default": "style-a",
+  "accounts": {
+    "链小智ChainThink": "style-a",
+    "链小智": "style-a",
+    "公众号A": "style-a",
+    "老韭要开喷": "style-b",
+    "老韭": "style-b",
+    "公众号B": "style-b",
+    "Ai吹哨兵": "style-c",
+    "AI吹哨兵": "style-c",
+    "ai": "style-c",
+    "公众号C": "style-c",
+    "迷因百科": "style-d",
+    "迷因": "style-d",
+    "公众号D": "style-d",
+    "账号E": "style-e",
+    "公众号E": "style-e"
+  }
+}
