@@ -1,0 +1,2 @@
+# Current scripts use Python standard library only.
+# No extra pip dependencies are required for the MVP version.

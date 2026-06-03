@@ -14,12 +14,15 @@ memory/
 drafts/
 .openclaw/
 .kiro/
-references/
+/references/
 
 # OS / editor
 .DS_Store
 skills/.DS_Store
 **/.DS_Store
+
+# Private / runtime artifacts
+*.db
 
 # Temp / local artifacts
 *.log
