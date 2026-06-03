@@ -1,24 +1,14 @@
 {
-  "default": "style-b",
+  "default": "style-example",
   "accounts": {
-    "链小智": "style-thinks-ai",
-    "ChainThink": "style-thinks-ai",
-    "ChainThink官号": "style-thinks-ai",
-    "Ai吹哨兵": "style-c",
-    "Ai掘金仔": "style-money",
-    "智AI研究社": "style-c",
-    "智Ai研究社": "style-c",
-    "老韭要开喷": "style-d",
-    "Ai掘金仔(双版本)": "style-money",
-    "Ai掘金仔(品牌版)": "style-a"
+    "主号": "style-example",
+    "副号": "style-example",
+    "测试号": "style-example"
   },
   "aliases": {
-    "吹哨兵": "Ai吹哨兵",
-    "ai吹哨兵": "Ai吹哨兵",
-    "掘金仔": "Ai掘金仔",
-    "ai掘金仔": "Ai掘金仔",
-    "智ai": "智Ai研究社",
-    "老韭": "老韭要开喷",
-    "链小智": "链小智"
+    "主号": "主号",
+    "主体": "主号",
+    "副号": "副号",
+    "测试": "测试号"
   }
 }

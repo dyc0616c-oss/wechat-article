@@ -12,7 +12,7 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 收到任一公众号写作任务后，**在写任何一个字之前**，必须执行以下三步，不得跳过：
 
 1. **锁账号** — 读 `references/account-style-map.json`，确认目标账号对应哪个 style
-2. **锁风格** — 读对应的 style 文件（如 style-money.md / style-ai-whistle.md 等）
+2. **锁风格** — 读对应的 style 文件（如 `style-example.md`）
 3. **锁模板** — HTML 排版**必须**以 `templates/article.html` 为骨架，禁止从零手写 HTML
 
 **违反任一规则的典型后果（已多次发生）：**
@@ -88,10 +88,10 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 ## 账号与风格加载
 
 - 账号映射文件：`references/account-style-map.json`
-- 账号风格文件：`references/style-a.md` ~ `references/style-e.md`
+- 账号风格文件：`references/style-example.md`（复制此文件创建你的 style）
 - 用户未指定账号时，默认读取映射文件中的 `default`
 - 用户指定账号名时，先查映射，再读取对应 style 文件
-- 用户直接给 `style-a` 这类 style id 时，按对应风格卡直接执行
+- 用户直接给 `style-example` 这类 style id 时，按对应风格卡直接执行
 - 若账号名未命中映射，回退到 `default`，并提示用户补充"账号名 → style"映射
 - **强制规则：未完成"账号锁定 + style锁定"前，不得起稿**
 - **强制规则：账号一旦锁定，正文口吻、结尾、CTA、标题、小标题均只能服从该 style，不得混用其他账号模块**
@@ -102,7 +102,7 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 
 0. **新手上手指南**：`references/new-user-onboarding-guide.md`（新用户必读——先看此文档了解完整工作流再看下面逐条规则）
 1. 账号映射：`references/account-style-map.json`
-2. 对应风格卡：`references/style-a.md` ~ `references/style-e.md`
+2. 对应风格卡：`references/style-example.md`（以此文件为模板创建自己的 style）
 3. 全局禁用词句：`references/banned-phrases.md`（强制，所有账号通用）
 4. **政治敏感规避**：`references/political-sensitivity.md`（强制，涉及中美/地缘话题时必读）
 5. 通用交稿检查清单：`references/article-delivery-checklist.md`（强制，交付前逐项核对）
@@ -110,8 +110,7 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 6. 五账号并行：`references/multi-account-workflow.md`（仅多账号任务时）
 7. 风格学习工作流：`references/style-learning-workflow.md`（仅风格学习任务时）
 8. 风格结构定义：`references/style-schema.md`（仅生成 style 文件时）
-9. **Crayon老板写作手法**：`references/crayon-writing-method.md`（强制，所有账号通用，每次起稿前必读——这是实战验证过的写作规则，优先级高于所有通用网感规则）
-10. 政治敏感检查：`references/wechat-political-sensitivity.md`（当文章涉及中美地缘、AI安全竞赛、科技封锁题材时必读）
+9. 政治敏感检查：`references/wechat-political-sensitivity.md`（当文章涉及中美地缘、AI安全竞赛、科技封锁题材时必读）
 11. 微信平台接入：`references/wechat-setup-guide.md`（仅平台配置任务时）
 11. Tuzi 文生图接入：`references/tuzi-setup-guide.md`（仅配图任务时）
 12. 测试发稿工作流：`references/draft-test-workflow.md`（仅测试发布任务时）
@@ -123,7 +122,6 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 17. 内容抓取技巧速查：`references/content-fetching-tips.md`（当目标站点有反爬限制、curl无效、或需要X/Twitter内容时）\n18. **Brave Search 备选**：`references/brave-search-fallback.md`（当 DDG/Google/Bing/Baidu 全部被反爬拦截时，Brave Search via curl 是无墙的最终搜索备选）\n18. **Google News RSS 搜索**：`references/google-news-rss-search.md`（当所有网页搜索引擎均被反爬拦截时，Google News RSS feed 不触发 CAPTCHA，返回结构化新闻结果——2026-05-25 实战验证）\n18. **Pillow 加密货币走势图生成**：`references/pillow-crypto-chart-generation.md`（当需要为文章生成代币价格走势对比图，但 CoinGecko API 限流且浏览器截图不可用时，用 Pillow 手动绘制）\n18. 叙事重框：`references/narrative-reframing.md`（当素材是"某人曝光某公司"类新闻，需去掉人驱动叙事改为事件驱动时）
 19. **微信发布合规**：`references/wechat-compliance.md`（强制，所有涉及加密货币/投资/代币、或存在封号风险的公众号文章必读，含封号风险规避、禁用词替换表、风险提示强制模块）
 20. **AI算命/赛博玄学市场数据**：`references/ai-fortune-telling-market-data.md`（当文章涉及AI算命变现、AI玄学副业等话题时查阅，包含行业规模数据、真实赚钱案例、产业链分工、出海vs本土对比等）
-22. 加密交易所黑料核查：`references/crypto-exchange-scandal-okx-2026.md`（当文章涉及CEX丑闻/冻结/貔貅合约/预测市场等话题时查阅，包含已验证的OKX丑闻数据）
 18. 事实核查系统：`references/article-fact-verification.md`（强制，交付前最后一步——所有文章写完到交付之间必须执行事实核查，逐条核实文中每一个可验证的声称。未核查不得交付）
 #### 反AI检测（强制 — 2026-05-26 每次写稿前必读）
 
@@ -140,7 +138,6 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 降级参考（默认不先读）：
 - `references/style-fingerprint.md`
 - `references/opening-ending-library.md`
-- `references/vibe-coding-crossover-figures.md` — 非程序员Vibe Coding跨界人物素材库（余华、胡彦斌、Milla Jovovich等）。仅当文章涉及「AI跨界/不写代码的人在做产品」主题时查阅
 
 当用户说"按我的号风格写"时，必须先完成账号映射与对应 style 锁定，再允许起稿。
 
@@ -639,25 +636,6 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 - 交稿前必须逐项核对当前 style 的"强制交稿检查清单"，任一项未通过不得交稿
 - 字数不准拍脑袋估，用户若追问字数，必须按明确口径回答（是否含标点 / 是否只算正文）
 
-#### style-c（Ai吹哨兵）当前最终方案
-- 题型：`有态度的避坑指南`
-- 不是纯避坑，也不是纯喷文；必须保留"避坑 / 生存经验 / 动作建议"的主功能，同时叠加 Ai吹哨兵的判断感、吐槽感与活人网感
-- 标题摘要优先：直接、有人味、有代入感、有代价感、有实用感；不要自嗨，不要只剩腔调
-- 正文必须给出可执行动作，而不是只给情绪判断；至少要落到注册怎么避、支付怎么避、使用怎么避
-- 禁用明显 AI 推进腔：如"第一个坑 / 第二个坑 / 第三个坑""首先 / 其次 / 最后"以及高密度"不是……而是……"转折胶水句
-- 语言要更像活人聊天，允许更痞、更损、更口语化，但不能低俗失控
-- 陈述句段尾默认不加句号；重点句、重点词、小标题必须真实落出，不得只给纯正文
-- 结尾结构锁死为：`评论区提问 + 下篇预告`
-- 公众号交付版必须直接可贴，不要 Markdown 标题、`###`、项目符号或需要用户二次拆结构的排版
-
-#### style-d（迷因百科）当前最终方案
-- 用户只给 meme 币合约地址时，必须先走：GMGN 查币 → X 查叙事 → 判断小切口 → 再出稿
-- GMGN 查询规则锁死：先看所有链，优先看市值最高 / 热度最高的链，默认重点看 BSC，不得先拍脑袋进 SOL
-- style-d 写的是"小切口讲大变化"，不是项目介绍，不是基本面报告，不是喊单文
-- 起稿前必须先判断题材骨架：小词/新命名型、热梗型、名字/符号型、小现象→大市场动作型；同类题材连续两篇不得复用同一骨架
-- 不准上来解释定义，不准写成知识科普号或币圈推广号
-- 正文默认隐藏后台搜索动作，不得出现"我去 GMGN 查了 / 推特上有人说"之类素材痕迹
-
 主 skill 只做两层校验：
 
 1. 全局底线校验
@@ -696,7 +674,7 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
   - `<head>` 内所有标签写在一行 → 不整洁，缺少 viewport meta
   - 缺少 `<style>` 块 → 无 CSS 样式，h1.title 和 titlestyle 不支持
   - 缺少 `img-wrap` 包裹层 → 图片无法正常居中显示
-  - 缺少 `titlestyle` 红色胶囊节标题 → 与链小智/智AI研究社等其他账号的排版不统一
+  - 缺少 `titlestyle` 红色胶囊节标题 → 与「新闻号/观点号」等其他账号的排版不统一
   - 解决方案：始终从 `templates/article.html` 复制骨架，只替换其中的标题/摘要/图片路径/正文文本，不动文件名、不动类名、不动标签结构
 - 仅当用户明确说「给我纯文本」时才切纯文本
 - 若用户明确要求 emoji 标注版，可使用 emoji 标注
@@ -915,7 +893,7 @@ bottom.save('section2.jpg', quality=85)
 - ❌ 封面图与第一节小标题配图重复使用同一张图片。封面图和首节配图必须是两张不同的图片，即使它们来自同一篇源文章的不同位置
 ### 图片与固定模块
 ### 配图
-### 配图布局规则（style-c / Ai吹哨兵 强制）
+### 配图布局规则（强制）
 当输出 HTML 排版版时，文章配图布局固定如下：
 - 封面图1张：放在标题和摘要在下一行、开篇正文之前
 - 每节1张图：放在每个小标题正上方（小标题上一行），图片与该节内容直接相关
@@ -1049,13 +1027,13 @@ bottom.save('section2.jpg', quality=85)
 **每次写稿前必须完成以下三步，缺一不可。跳过任何一步直接写稿 = 用户会发现排版跟历史文章不一样。**
 
 1. **先读本 skill**（`skill_view('wechat-article')`）— 确认账号映射、风格卡、模板路径
-2. **再读账号风格卡**（如 `style-money.md`、`style-ai-whistle.md`）— 确认标题格式、正文结构、双版本规则、禁用词
+2. **再读账号风格卡**（如 `style-example.md`）— 确认标题格式、正文结构、双版本规则、禁用词
 3. **最后读 HTML 模板**（`templates/article.html`）— 复制骨架，只替换标题/摘要/图片/正文
 
 **常见翻车模式（2026-05-28 实战）：**
-- 没读 skill → 不知道 Ai掘金仔 要出双版本 → 只写了一个版本
+- 没读 skill → 不知道目标账号有特殊规则 → 只写了一个版本
 - 没读风格卡 → 不知道要用「」胶囊标题 → 写了 H2 编号标题
-- 没读模板 → 从零手写 HTML → 排版跟十天前的链小智/智AI研究社都不一样
+- 没读模板 → 从零手写 HTML → 排版跟历史文章都不一样
 - 用户原话：「我现在严重怀疑你没有读取你的skills」
 
 ## 工作流顺序（起稿前强制步骤）
@@ -1348,7 +1326,7 @@ wechat-writing-assistant 中「学习风格」功能也已完成 Hermes → 直�
 ```
 ~/Desktop/公众号文稿/
 └── {月.日}/                # 如 5.12、5.13
-    └── {公众号名}/          # 如 Ai吹哨兵、链小智、Ai掘金仔（每个账号独立文件夹，不可混放）
+    └── {公众号名}/          # 如 科技号、新闻号、娱乐号（每个账号独立文件夹，不可混放）
         ├── {主标题}.html     # 如 宇树造出390万机甲，高达走进现实了.html
         └── 图片/            # 文章所用配图
             ├── 图1.png
@@ -1357,16 +1335,16 @@ wechat-writing-assistant 中「学习风格」功能也已完成 Hermes → 直�
 
 ### 账号文件夹分离规则（强制 2026-05-15 用户纠正）
 - **每个公众号一个独立文件夹**，互不混放
-- 即便两个账号共用同一种写作风格（如 Ai吹哨兵 和 Ai掘金仔 共用 style-c/money 逻辑），HTML 文件和配图也必须存在各自账号名下的文件夹中
-- 常见错误（已发生）：写 Ai掘金仔 文章时存到了 Ai吹哨兵 文件夹 → 立即修正
+- 即便两个账号共用同一种写作风格，HTML 文件和配图也必须存在各自账号名下的文件夹中
+- 常见错误（已发生）：写娱乐号文章时存到了新闻号文件夹 → 立即修正
 
 ### 同源多账号配图隔离规则（2026-05-18 实战教训）
 当同一个新闻素材（如一个 X/Twitter 链接）要为多个不同公众号写稿时，**每个账号的图片文件夹必须独立存放，不能共用**。
 
 **常见错误模式（已发生）：**
-1. 为 链小智 写 Bitget 报道时下载 ZachXBT 截图到 `链小智/图片/`
-2. 接着为 老韭要开喷 写同素材报道，HTML 中引用 `图片/zachxbt-blast.jpg`
-3. HTML 存到了 `老韭要开喷/` 目录下，但图片在 `链小智/图片/` 里
+1. 为 科技号 写报道时下载截图到 `科技号/图片/`
+2. 接着为 新闻号 写同素材报道，HTML 中引用 `图片/zachxbt-blast.jpg`
+3. HTML 存到了 `新闻号/` 目录下，但图片在 `科技号/图片/` 里
 4. 交付时图片空白，因为相对路径 `图片/xxx.jpg` 在同级目录下找不到
 
 **正确做法：**
