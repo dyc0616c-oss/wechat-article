@@ -12,7 +12,7 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 收到任一公众号写作任务后，**在写任何一个字之前**，必须执行以下三步，不得跳过：
 
 1. **锁账号** — 读 `references/account-style-map.json`，确认目标账号对应哪个 style
-2. **锁风格** — 读对应的 style 文件（如 `style-example.md`）
+2. **锁风格** — 读对应的 style 文件（如 `style-web3-template.md` 或 `style-ai-template.md`）
 3. **锁模板** — HTML 排版**必须**以 `templates/article.html` 为骨架，禁止从零手写 HTML
 
 **违反任一规则的典型后果（已多次发生）：**
@@ -88,10 +88,10 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 ## 账号与风格加载
 
 - 账号映射文件：`references/account-style-map.json`
-- 账号风格文件：`references/style-example.md`（复制此文件创建你的 style）
+- 账号风格文件：`references/style-web3-template.md` 和 `references/style-ai-template.md`（以此为模板创建你的 style）
 - 用户未指定账号时，默认读取映射文件中的 `default`
 - 用户指定账号名时，先查映射，再读取对应 style 文件
-- 用户直接给 `style-example` 这类 style id 时，按对应风格卡直接执行
+- 用户直接给 `style-web3-template` 或 `style-ai-template` 这类 style id 时，按对应风格卡直接执行
 - 若账号名未命中映射，回退到 `default`，并提示用户补充"账号名 → style"映射
 - **强制规则：未完成"账号锁定 + style锁定"前，不得起稿**
 - **强制规则：账号一旦锁定，正文口吻、结尾、CTA、标题、小标题均只能服从该 style，不得混用其他账号模块**
@@ -102,7 +102,7 @@ description: 微信公众号内容创作、改写、风格学习与发布技能�
 
 0. **新手上手指南**：`references/new-user-onboarding-guide.md`（新用户必读——先看此文档了解完整工作流再看下面逐条规则）
 1. 账号映射：`references/account-style-map.json`
-2. 对应风格卡：`references/style-example.md`（以此文件为模板创建自己的 style）
+2. 对应风格卡：`references/style-web3-template.md` 或 `references/style-ai-template.md`（以此为模板创建自己的 style）
 3. 全局禁用词句：`references/banned-phrases.md`（强制，所有账号通用）
 4. **政治敏感规避**：`references/political-sensitivity.md`（强制，涉及中美/地缘话题时必读）
 5. 通用交稿检查清单：`references/article-delivery-checklist.md`（强制，交付前逐项核对）
@@ -1027,7 +1027,7 @@ bottom.save('section2.jpg', quality=85)
 **每次写稿前必须完成以下三步，缺一不可。跳过任何一步直接写稿 = 用户会发现排版跟历史文章不一样。**
 
 1. **先读本 skill**（`skill_view('wechat-article')`）— 确认账号映射、风格卡、模板路径
-2. **再读账号风格卡**（如 `style-example.md`）— 确认标题格式、正文结构、双版本规则、禁用词
+2. **再读账号风格卡**（如 `style-web3-template.md` 或 `style-ai-template.md`）— 确认标题格式、正文结构、禁用词
 3. **最后读 HTML 模板**（`templates/article.html`）— 复制骨架，只替换标题/摘要/图片/正文
 
 **常见翻车模式（2026-05-28 实战）：**

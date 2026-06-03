@@ -1,14 +1,14 @@
 {
-  "default": "style-example",
+  "default": "style-web3-template",
   "accounts": {
-    "主号": "style-example",
-    "副号": "style-example",
-    "测试号": "style-example"
+    "Web3号": "style-web3-template",
+    "AI号": "style-ai-template",
+    "测试号": "style-web3-template"
   },
   "aliases": {
-    "主号": "主号",
-    "主体": "主号",
-    "副号": "副号",
+    "主号": "Web3号",
+    "web3号": "Web3号",
+    "ai号": "AI号",
     "测试": "测试号"
   }
 }
