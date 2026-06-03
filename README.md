@@ -68,8 +68,8 @@
 系统会从 **10个维度**分析你的文章（标题风格、段落节奏、口语化程度、结尾方式……），自动生成一个专属 style 文件。
 
 > 不想从零写 style？仓库里已经提供两个现成模板：
-> - `style-web3-template.md` — 基于链智库写作体系，适合Web3/加密行业号
-> - `style-ai-template.md` — 基于Ai吹哨兵写作体系，适合AI行业号
+> - `style-web3-template.md` — 适合Web3/加密行业号
+> - `style-ai-template.md` — 适合AI行业号
 >
 > 直接拿去填空修改即可。
 
